@@ -1,17 +1,17 @@
 module MyEnumerable
-  def all?
-    each { |ele| return false unless yield ele }
+  def all?(&block)
+    each { |element| return false unless block.call(element) }
     true
   end
 
-  def any?
-    each { |ele| return true if yield ele }
+  def any?(&block)
+    each { |element| return true if block.call(element) }
     false
   end
 
-  def filter
+  def filter(&block)
     result = []
-    each { |ele| result << ele if yield ele }
+    each { |element| result << element if block.call(element) }
     result
   end
 end
