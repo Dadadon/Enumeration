@@ -7,11 +7,11 @@ class MyList
     @list = []
   end
 
-  def append(ele)
-    @list << ele
+  def append(element)
+    @list << element
   end
 
   def each
-    @list.each { |ele| yield ele }
+    @list.each { |element| yield element }
   end
 end
