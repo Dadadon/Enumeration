@@ -2,15 +2,15 @@ require './my_enumerable'
 
 class MyList
   include MyEnumerable
-  
+
   def initialize
     @list = []
   end
-  
+
   def append(ele)
-    @list << el
+    @list << ele
   end
-  
+
   def each
     @list.each { |ele| yield ele }
   end
