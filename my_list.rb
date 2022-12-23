@@ -3,8 +3,8 @@ require './my_enumerable'
 class MyList
   include MyEnumerable
 
-  def initialize
-    @list = []
+  def initialize(*elements)
+    @list = elements
   end
 
   def append(elem)
