@@ -11,8 +11,9 @@ class MyList
     @list << element
   end
 
-  # rubocop:disable Lint/YieldWithImplicitBlockArgument
+  # rubocop:disable Style/ExplicitBlockArgument
   def each
     @list.each { |element| yield element }
   end
+  # rubocop:enable Style/ExplicitBlockArgument
 end
