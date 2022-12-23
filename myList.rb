@@ -1,4 +1,4 @@
-require './myEnumerable'
+require './my_enumerable'
 
 class MyList
   include MyEnumerable
@@ -7,11 +7,11 @@ class MyList
     @list = []
   end
   
-  def append(el)
+  def append(ele)
     @list << el
   end
   
   def each
-    @list.each { |el| yield el }
+    @list.each { |ele| yield ele }
   end
 end
