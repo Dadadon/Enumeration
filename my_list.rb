@@ -7,13 +7,13 @@ class MyList
     @list = []
   end
 
-  def append(element)
-    @list << element
+  def append(elem)
+    @list << elem
   end
 
   # rubocop:disable Style/ExplicitBlockArgument
   def each
-    @list.each { |element| yield element }
+    @list.each { |elem| yield elem }
   end
   # rubocop:enable Style/ExplicitBlockArgument
 end
